@@ -1,0 +1,28 @@
+[project]
+name = "facebook-marketplace-scraper"
+version = "0.1.0"
+description = "Playwright-based Facebook Marketplace property listing collector"
+requires-python = ">=3.13"
+license = "MIT"
+readme = "README.md"
+dependencies = ["playwright>=1.55,<2", "pydantic>=2.10,<3", "pydantic-settings>=2.7,<3"]
+
+[project.urls]
+Repository = "https://github.com/tikhonov1994/facebook-marketplace-scraper"
+
+[project.scripts]
+facebook-scraper = "facebook_marketplace_scraper.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9", "pytest-asyncio>=0.25,<1", "build>=1.2,<2"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

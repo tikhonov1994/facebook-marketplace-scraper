@@ -4,6 +4,19 @@ An independent Python library and CLI for collecting Facebook Marketplace proper
 listings with Playwright. Includes manual login, a dedicated persistent browser
 profile, bounded discovery, and JSON export. Licensed under MIT.
 
+## Used in production
+
+This scraper powers Facebook Marketplace listing collection for
+[ThaiDwell](https://thaidwell.com), a property listings project focused on Pattaya,
+Thailand. This repository provides the standalone collection component.
+
+## Contact
+
+For custom improvements, feature development, and collaboration, contact me:
+
+- Email: [tikhonov199@yandex.ru](mailto:tikhonov199@yandex.ru)
+- Telegram: [@i_tikhonov](https://t.me/i_tikhonov)
+
 ## Scope
 
 The current implementation targets **property rentals and sales in Pattaya,
@@ -59,6 +72,10 @@ Complete login manually in the opened browser, open Marketplace, then press Ente
 in the terminal. A dedicated profile and refreshed storage state are saved under
 `data/facebook/`. Use the same working directory and configuration for subsequent
 runs. Never point this tool at your everyday browser profile.
+
+In ThaiDwell's production use, Facebook sessions have lasted **from one week to
+one month** before requiring a new manual login. This is an observed range, not a
+guaranteed session lifetime.
 
 The output is a UTF-8 JSON array. An existing output file is never overwritten.
 To skip previously collected IDs, create a JSON array such as `["123", "456"]`:

@@ -21,6 +21,16 @@ No database, queue, AI extraction, availability checks, or image downloads are
 required. A snapshot reader is also available as `FacebookSnapshotCollector` in
 `facebook_marketplace_scraper.collector` for existing NDJSON records.
 
+## Acknowledgements
+
+The approach of reading JSON responses delivered to the browser during scrolling,
+with HTML as a fallback, was inspired by
+[danyk20/facebook-marketplace-scraper](https://github.com/danyk20/facebook-marketplace-scraper).
+That project was also used to study the Marketplace search response structure.
+Our asynchronous response parsing and capture implementation is in
+[`feed.py`](src/facebook_marketplace_scraper/feed.py), with discovery limits and
+HTML fallback handled by [`collector.py`](src/facebook_marketplace_scraper/collector.py).
+
 ## Installation
 
 Requires Python 3.13+ and macOS or Linux (profile locking uses `fcntl`).

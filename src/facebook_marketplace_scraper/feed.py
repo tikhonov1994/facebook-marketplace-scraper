@@ -1,7 +1,8 @@
 """Read Marketplace search batches already delivered to the browser.
 
-The response shapes were studied in danyk20/facebook-marketplace-scraper;
-this implementation uses our asynchronous browser and bounded collection policy.
+The response shapes were studied in danyk20/facebook-marketplace-scraper:
+https://github.com/danyk20/facebook-marketplace-scraper
+This implementation uses our asynchronous browser and bounded collection policy.
 """
 
 import asyncio
